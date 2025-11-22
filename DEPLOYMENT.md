@@ -84,8 +84,8 @@ After initial deployment, any updates are simple:
 
 The following files are essential for deployment:
 ```
-├── .github/workflows/static.yml  # Deployment workflow (DO NOT DELETE)
-├── index.html                     # Main page (REQUIRED)
+├── .github/workflows/static.yml  # Required for GitHub Pages deployment
+├── index.html                     # Main page (required)
 ├── styles.css                     # Styles
 ├── script.js                      # Scripts
 └── README.md                      # Documentation

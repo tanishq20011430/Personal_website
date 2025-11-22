@@ -20,7 +20,7 @@ This website is configured for automatic deployment to GitHub Pages using GitHub
 
 ### Deployment Process
 
-1. **Automatic Deployment**: Every push to the `main` branch triggers an automatic deployment
+1. **Automatic Deployment**: Every push to the `main` branch triggers an automatic deployment (once GitHub Pages is configured to use GitHub Actions)
 2. **Manual Deployment**: You can also trigger deployment manually from the Actions tab
 3. **GitHub Pages Configuration**: The workflow automatically handles all deployment steps
 
