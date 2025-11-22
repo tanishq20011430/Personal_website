@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanishq Soni - Data Analyst | Data Scientist</title>
+    <meta name="description"
+        content="Tanishq Soni - Data Analyst and Scientist. Turning Messy Data into Measurable Business Outcomes. Skilled in Power BI, SQL, Python, and AI-integrated analytics.">
+    <meta name="keywords" content="Data Analyst, Data Scientist, Power BI, SQL, Python, Machine Learning, Analytics">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS v3 (v4 is not yet available via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        slate: {
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-slate-950 text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+        <div class="nav-glass rounded-full px-6 py-3 flex items-center justify-between">
+            <div class="font-mono font-bold text-lg">
+                <span class="text-blue-400">TS</span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <button id="copy-email-btn" class="copy-email-btn">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span>Copy Email</span>
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu mt-2 nav-glass rounded-2xl overflow-hidden">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i data-lucide="check-circle" class="w-5 h-5"></i>
+        <span>Email copied to clipboard!</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Spotlight Effect -->
+        <div id="spotlight" class="spotlight"></div>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-6 stagger-item">
+                    <div class="space-y-2">
+                        <p class="text-blue-400 font-mono text-sm md:text-base">Hi, I'm Tanishq Soni 👋</p>
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-mono tracking-tight leading-tight">
+                            Engineering Data<br>
+                            <span class="gradient-text">into Decisions.</span>
+                        </h1>
+                    </div>
+
+                    <p class="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl">
+                        I combine <span class="text-blue-400 font-semibold">Data Science</span> with
+                        <span class="text-emerald-400 font-semibold">Process Automation</span> to build tools
+                        that save time and drive strategic growth.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#projects" class="btn-primary">
+                            <span>View Work</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" id="download-resume-btn" class="btn-secondary">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-4 pt-4">
+                        <a href="https://github.com/tanishq20011430" target="_blank" class="social-link"
+                            aria-label="GitHub">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank" class="social-link"
+                            aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="mailto:tanishqsoni81@gmail.com" class="social-link" aria-label="Email">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content - Code Block -->
+                <div class="stagger-item">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <span class="text-xs text-slate-400">automation.py</span>
+                        </div>
+                        <div class="code-content">
+                            <pre class="font-mono text-sm"><code><span class="text-purple-400">def</span> <span class="text-yellow-400">automate_workflow</span>(<span class="text-orange-400">data</span>):
+    <span class="text-slate-400"># ETL Pipeline Automation</span>
+    <span class="text-blue-400">extract</span> = <span class="text-yellow-400">fetch_data</span>(<span class="text-orange-400">data</span>)
+    <span class="text-blue-400">transform</span> = <span class="text-yellow-400">clean_data</span>(<span class="text-orange-400">extract</span>)
+    <span class="text-blue-400">load</span> = <span class="text-yellow-400">push_to_db</span>(<span class="text-orange-400">transform</span>)
+    
+    <span class="text-purple-400">return</span> {
+        <span class="text-green-400">"status"</span>: <span class="text-green-400">"success"</span>,
+        <span class="text-green-400">"efficiency"</span>: <span class="text-green-400">"+70%"</span>,
+        <span class="text-green-400">"time_saved"</span>: <span class="text-green-400">"12 hrs/week"</span>
+    }</code></pre>
+                            <div class="code-output">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
+                                    <span class="text-green-400">Workflow Automated Successfully</span>
+                                </div>
+                                <div class="text-blue-400 mt-2">→ Manual effort reduced by 70%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+            <i data-lucide="chevron-down" class="w-6 h-6"></i>
+        </div>
+    </section>
+
+    <!-- Projects Section - Bento Grid -->
+    <section id="projects" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16 stagger-item">
+                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Featured Projects</h2>
+                <p class="text-slate-400 text-lg">Building solutions that drive measurable impact</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Tile 1 - Large (Booking Analysis) -->
+                <div class="bento-card large stagger-item" data-tilt>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge-primary">Power BI</span>
+                        <span class="badge-secondary">SQL</span>
+                        <span class="badge-secondary">DAX</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-mono mb-3">Booking Analysis Report</h3>
+                    <p class="text-slate-400 mb-6">
+                        60-page Power BI report from scratch, integrating 2M+ records via SQL.
+                        Reduced refresh time by 40%.
+                    </p>
+                    <div class="dashboard-mockup">
+                        <div class="chart-bar"></div>
+                        <div class="chart-line"></div>
+                        <div class="chart-pie"></div>
+                    </div>
+                    <div class="mt-4 flex items-center gap-2 text-sm text-blue-400">
+                        <i data-lucide="trending-up" class="w-4 h-4"></i>
+                        <span>40% faster refresh time</span>
+                    </div>
+                </div>
+
+                <!-- Tile 2 - Sports Data Pipeline -->
+                <div class="bento-card standard stagger-item" data-tilt>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge-primary">Python ETL</span>
+                        <span class="badge-secondary">LLM</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-3">AI-Powered Sports Pipeline</h3>
+                    <p class="text-slate-400 mb-4">
+                        Python-based ETL integrating Perplexity LLM and Odds API.
+                        Automated daily updates.
+                    </p>
+                    <div class="terminal-window">
+                        <div class="terminal-line"><span class="text-green-400">→</span> Fetching data from API...</div>
+                        <div class="terminal-line"><span class="text-green-400">✓</span> Data fetched successfully</div>
+                        <div class="terminal-line"><span class="text-green-400">→</span> Processing with LLM...</div>
+                        <div class="terminal-line"><span class="text-green-400">✓</span> Pipeline complete</div>
+                    </div>
+                </div>
+
+                <!-- Tile 3 - SQL Execution Tool -->
+                <div class="bento-card standard stagger-item" data-tilt>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge-primary">Full Stack</span>
+                        <span class="badge-secondary">SQL</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-3">SQL Execution Tool</h3>
+                    <p class="text-slate-400 mb-6">
+                        Web-based tool replacing pgAdmin for internal teams,
+                        increasing analyst productivity by 60%.
+                    </p>
+                    <div class="flex items-center justify-center gap-6 py-6">
+                        <div class="icon-box">
+                            <i data-lucide="database" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <div class="connector-line"></div>
+                        <div class="icon-box">
+                            <i data-lucide="globe" class="w-8 h-8 text-emerald-400"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <span class="text-emerald-400 font-bold">60% productivity boost</span>
+                    </div>
+                </div>
+
+                <!-- Tile 4 - Metric Card -->
+                <div class="bento-card small metric-card stagger-item" data-tilt>
+                    <div class="text-center">
+                        <div class="metric-number">70%</div>
+                        <p class="text-slate-400 text-sm font-medium">Manual Effort Reduced</p>
+                        <i data-lucide="zap" class="w-6 h-6 text-yellow-400 mx-auto mt-2"></i>
+                    </div>
+                </div>
+
+                <!-- Tile 5 - Tech Stack -->
+                <div class="bento-card small tech-stack-card stagger-item" data-tilt>
+                    <h4 class="text-sm font-mono font-semibold mb-4 text-center">Tech Stack</h4>
+                    <div class="tech-cloud">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">SQL</span>
+                        <span class="tech-badge">AWS</span>
+                        <span class="tech-badge">Azure</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Git</span>
+                    </div>
+                </div>
+
+                <!-- Tile 6 - AI Recommendation System -->
+                <div class="bento-card standard stagger-item" data-tilt>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge-primary">Machine Learning</span>
+                        <span class="badge-secondary">AWS</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-3">AI Recommendation System</h3>
+                    <p class="text-slate-400 mb-4">
+                        Hybrid recommender for 10k+ monthly users, boosting engagement by 20%.
+                    </p>
+                    <div class="flex items-center gap-4 mt-6">
+                        <div class="stat-box">
+                            <div class="text-2xl font-bold text-blue-400">10k+</div>
+                            <div class="text-xs text-slate-400">Users/month</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="text-2xl font-bold text-emerald-400">+20%</div>
+                            <div class="text-xs text-slate-400">Engagement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16 stagger-item">
+                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Experience Journey</h2>
+                <p class="text-slate-400 text-lg">2+ years of driving data-driven decisions</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline Item 1 - Maxima Apparel -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jan 2025 – Present</div>
+                        <h3 class="text-2xl font-bold font-mono mb-2">Data Analyst</h3>
+                        <p class="text-blue-400 mb-4">Maxima Apparel</p>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Deployed 12 interactive Power BI reports, improving data accessibility for 5
+                                    departments</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Reduced reporting turnaround time by 43%</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Built automated ETL pipelines (Python/SQL) reducing manual effort by 70%</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Developed a web-based SQL execution tool accelerating query execution by
+                                    60%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 - Drona Pay -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Oct 2023 – Oct 2024</div>
+                        <h3 class="text-2xl font-bold font-mono mb-2">Jr. Business Analyst</h3>
+                        <p class="text-blue-400 mb-4">Drona Pay</p>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Orchestrated automation of 5 critical workflows with Camunda (30% efficiency
+                                    gain)</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Administered databases and conducted log analysis ensuring 99.9% uptime</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Tested 30+ API endpoints for seamless integration</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 - KPMG -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jun 2023 – Aug 2023</div>
+                        <h3 class="text-2xl font-bold font-mono mb-2">Data Analytics Intern</h3>
+                        <p class="text-blue-400 mb-4">KPMG</p>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Analyzed business data to identify trends and support strategic
+                                    decision-making</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Collaborated with cross-functional teams to deliver data-driven insights</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 md:py-32 bg-slate-900/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16 stagger-item">
+                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Skills & Technologies</h2>
+                <p class="text-slate-400 text-lg">Comprehensive toolkit for data-driven solutions</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="skill-category stagger-item">
+                    <div class="skill-icon">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-4">Languages</h3>
+                    <div class="space-y-2">
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">SQL</div>
+                        <div class="skill-item">R</div>
+                        <div class="skill-item">C++</div>
+                    </div>
+                </div>
+
+                <div class="skill-category stagger-item">
+                    <div class="skill-icon">
+                        <i data-lucide="bar-chart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-4">Visualization</h3>
+                    <div class="space-y-2">
+                        <div class="skill-item">Power BI</div>
+                        <div class="skill-item">Tableau</div>
+                        <div class="skill-item">Matplotlib</div>
+                        <div class="skill-item">Seaborn</div>
+                    </div>
+                </div>
+
+                <div class="skill-category stagger-item">
+                    <div class="skill-icon">
+                        <i data-lucide="brain" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-4">Machine Learning</h3>
+                    <div class="space-y-2">
+                        <div class="skill-item">Regression</div>
+                        <div class="skill-item">Classification</div>
+                        <div class="skill-item">NLP (BERT)</div>
+                        <div class="skill-item">XGBoost</div>
+                    </div>
+                </div>
+
+                <div class="skill-category stagger-item">
+                    <div class="skill-icon">
+                        <i data-lucide="settings" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-4">Tools & Cloud</h3>
+                    <div class="space-y-2">
+                        <div class="skill-item">AWS</div>
+                        <div class="skill-item">Docker</div>
+                        <div class="skill-item">Airflow</div>
+                        <div class="skill-item">Git</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Terminal -->
+    <section class="py-20 md:py-32">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8 stagger-item">
+                    <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Interactive Terminal</h2>
+                    <p class="text-slate-400 text-lg">Try commands: <code class="text-blue-400">help</code>, <code
+                            class="text-blue-400">skills</code>, <code class="text-blue-400">contact</code></p>
+                </div>
+
+                <div class="terminal-container stagger-item">
+                    <div class="terminal-header">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <span class="text-xs text-slate-400">terminal</span>
+                    </div>
+                    <div id="terminal-output" class="terminal-output">
+                        <div class="terminal-line">Welcome to Tanishq's Portfolio Terminal v1.0</div>
+                        <div class="terminal-line text-slate-400">Type 'help' to see available commands</div>
+                        <div class="terminal-line">&nbsp;</div>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="text-emerald-400">visitor@tanishq:~$</span>
+                        <input type="text" id="terminal-input" class="terminal-input" autofocus>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-32 bg-slate-900/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-12 stagger-item">
+                    <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Get In Touch</h2>
+                    <p class="text-slate-400 text-lg">Let's discuss how data can drive your business forward</p>
+                </div>
+
+                <form id="contact-form" class="contact-form stagger-item">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" rows="5" class="form-input" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full">
+                        <span>Send Message</span>
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                </form>
+
+                <div class="mt-12 text-center space-y-4">
+                    <div class="flex items-center justify-center gap-2 text-slate-400">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <a href="mailto:tanishqsoni81@gmail.com"
+                            class="hover:text-blue-400 transition-colors">tanishqsoni81@gmail.com</a>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-slate-400">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        <span>+91 8824212520</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-slate-400 text-sm">
+                    © 2025 Tanishq Soni. Turning Messy Data into Measurable Outcomes.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/tanishq20011430" target="_blank"
+                        class="text-slate-400 hover:text-blue-400 transition-colors" aria-label="GitHub">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank"
+                        class="text-slate-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="mailto:tanishqsoni81@gmail.com"
+                        class="text-slate-400 hover:text-blue-400 transition-colors" aria-label="Email">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
