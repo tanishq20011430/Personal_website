@@ -359,9 +359,7 @@ function initializeContactForm() {
 // ==========================================
 document.getElementById('download-resume-btn')?.addEventListener('click', (e) => {
     e.preventDefault();
-    alert('Resume download feature would be implemented here. Add your resume PDF to the project and link it.');
-    // In production, this would be:
-    // window.open('path/to/resume.pdf', '_blank');
+    window.open('Tanishq_Soni_DS_Resume.docx', '_blank');
 });
 
 // ==========================================
@@ -511,3 +509,4 @@ window.addEventListener('scroll', optimizedScroll);
 
 console.log('%c👋 Welcome to Tanishq\'s Portfolio!', 'color: #3b82f6; font-size: 20px; font-weight: bold;');
 console.log('%cTurning Messy Data into Measurable Business Outcomes', 'color: #10b981; font-size: 14px;');
+
