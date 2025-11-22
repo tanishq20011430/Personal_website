@@ -1,0 +1,44 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+.cache/
+
+# Build and Distribution
+dist/
+build/
+*.map
+
+# Node modules (if ever added)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# Backup Files
+*.bak
+*.backup
