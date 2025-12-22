@@ -316,41 +316,142 @@ function initializeContactForm() {
 
     if (!form) return;
 
+    // ==========================================
+    // OPTION 1: EmailJS (Recommended - More Control)
+    // ==========================================
+    // 1. Sign up at https://www.emailjs.com/
+    // 2. Create an email service
+    // 3. Create an email template with variables: {{name}}, {{email}}, {{message}}
+    // 4. Get your Public Key, Service ID, and Template ID
+    // 5. Uncomment and configure the code below:
+
+    /*
+    // Initialize EmailJS with your Public Key
+    (function() {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    })();
+
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const formData = {
+        const submitBtn = form.querySelector('#submit-btn');
+        const originalText = submitBtn.innerHTML;
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending...</span>';
+
+        const templateParams = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             message: document.getElementById('message').value
         };
 
-        // Mock form submission (replace with actual API call)
-        console.log('Form submitted:', formData);
+        try {
+            await emailjs.send(
+                'YOUR_SERVICE_ID',     // Replace with your EmailJS service ID
+                'YOUR_TEMPLATE_ID',    // Replace with your EmailJS template ID
+                templateParams
+            );
 
-        // Show success message
-        const submitBtn = form.querySelector('button[type="submit"]');
+            // Success
+            submitBtn.innerHTML = '<i data-lucide="check-circle" class="w-4 h-4"></i><span>Message Sent!</span>';
+            submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+
+            form.reset();
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            }, 3000);
+
+        } catch (error) {
+            console.error('EmailJS Error:', error);
+            
+            // Error
+            submitBtn.innerHTML = '<i data-lucide="x-circle" class="w-4 h-4"></i><span>Failed to Send</span>';
+            submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            }, 3000);
+        }
+    });
+    */
+
+    // ==========================================
+    // OPTION 2: Web3Forms (Easiest & Most Reliable)
+    // ==========================================
+    // Get your access key from https://web3forms.com
+    // 1. Visit web3forms.com
+    // 2. Enter your email (tanishqsoni81@gmail.com)
+    // 3. Get your free access key
+    // 4. Replace YOUR_ACCESS_KEY_HERE below
+    
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('#submit-btn');
         const originalText = submitBtn.innerHTML;
 
-        submitBtn.innerHTML = '<i data-lucide="check-circle" class="w-4 h-4"></i><span>Message Sent!</span>';
-        submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending...</span>';
 
-        // Reinitialize Lucide icons
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        }
+        // Prepare form data
+        const formData = new FormData(form);
+        formData.append('access_key', 'd38852f8-1564-4a4f-ab3f-57dfe8a62088'); // Replace with your Web3Forms access key
+        formData.append('subject', 'New Contact Form Submission from Portfolio');
+        formData.append('from_name', 'Portfolio Contact Form');
 
-        // Reset form
-        form.reset();
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
 
-        // Reset button after 3 seconds
-        setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.style.background = '';
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
+            const data = await response.json();
+
+            if (data.success) {
+                // Success
+                submitBtn.innerHTML = '<i data-lucide="check-circle" class="w-4 h-4"></i><span>Message Sent!</span>';
+                submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+
+                form.reset();
+
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }, 3000);
+            } else {
+                throw new Error(data.message || 'Form submission failed');
             }
-        }, 3000);
+
+        } catch (error) {
+            console.error('Form submission error:', error);
+            
+            // Error
+            submitBtn.innerHTML = '<i data-lucide="x-circle" class="w-4 h-4"></i><span>Failed to Send</span>';
+            submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            }, 3000);
+        }
     });
 }
 

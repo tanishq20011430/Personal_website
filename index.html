@@ -40,6 +40,9 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body class="bg-slate-950 text-white font-sans antialiased overflow-x-hidden">
@@ -509,7 +512,7 @@
                         <textarea id="message" name="message" rows="5" class="form-input" required></textarea>
                     </div>
 
-                    <button type="submit" class="btn-primary w-full">
+                    <button type="submit" class="btn-primary w-full" id="submit-btn">
                         <span>Send Message</span>
                         <i data-lucide="send" class="w-4 h-4"></i>
                     </button>
