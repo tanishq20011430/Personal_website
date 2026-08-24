@@ -300,6 +300,59 @@ body {
 }
 
 /* ==========================================
+   HIGHLIGHTS STRIP
+   ========================================== */
+.highlight-stat {
+    padding: 0.5rem;
+}
+
+.highlight-number {
+    font-size: 2.25rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    background: linear-gradient(135deg, #3b82f6, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.highlight-label {
+    margin-top: 0.25rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #94a3b8;
+}
+
+/* ==========================================
+   CERTIFICATION BADGES
+   ========================================== */
+.cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+}
+
+.cert-badge svg,
+.cert-badge i {
+    color: #fbbf24;
+    flex-shrink: 0;
+}
+
+.cert-badge:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    background: rgba(59, 130, 246, 0.08);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
    BENTO GRID
    ========================================== */
 .bento-grid {

@@ -4,10 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanishq Soni - Data Analyst | Data Scientist</title>
+    <title>Tanishq Soni — Data Analyst · Data Scientist</title>
     <meta name="description"
-        content="Tanishq Soni - Data Analyst and Scientist. Turning Messy Data into Measurable Business Outcomes. Skilled in Power BI, SQL, Python, and AI-integrated analytics.">
-    <meta name="keywords" content="Data Analyst, Data Scientist, Power BI, SQL, Python, Machine Learning, Analytics">
+        content="Tanishq Soni — Data Analyst & Data Scientist with 2+ years of experience in SQL, Python, Power BI, machine learning, and analytics automation across retail and fintech.">
+    <meta name="keywords"
+        content="Tanishq Soni, Data Analyst, Data Scientist, Machine Learning, Power BI, SQL, Python, XGBoost, ETL, Analytics">
+    <meta name="author" content="Tanishq Soni">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tanishq Soni — Data Analyst · Data Scientist">
+    <meta property="og:description"
+        content="2+ years building production data and ML systems: forecasting models, ETL pipelines, LLM-powered analytics tooling, and Power BI dashboards.">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,9 +51,6 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body class="bg-slate-950 text-white font-sans antialiased overflow-x-hidden">
@@ -56,8 +64,10 @@
 
             <div class="hidden md:flex items-center gap-8">
                 <a href="#home" class="nav-link">Home</a>
-                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
 
@@ -67,7 +77,7 @@
             </button>
 
             <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-btn" class="md:hidden">
+            <button id="mobile-menu-btn" class="md:hidden" aria-label="Open menu">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
@@ -75,8 +85,10 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu mt-2 nav-glass rounded-2xl overflow-hidden">
             <a href="#home" class="mobile-nav-link">Home</a>
-            <a href="#experience" class="mobile-nav-link">Experience</a>
             <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#education" class="mobile-nav-link">Education</a>
             <a href="#contact" class="mobile-nav-link">Contact</a>
         </div>
     </nav>
@@ -105,9 +117,10 @@
                     </div>
 
                     <p class="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl">
-                        I combine <span class="text-blue-400 font-semibold">Data Science</span> with
-                        <span class="text-emerald-400 font-semibold">Process Automation</span> to build tools
-                        that save time and drive strategic growth.
+                        Data Analyst &amp; Data Scientist with 2+ years building production analytics and
+                        <span class="text-blue-400 font-semibold">machine learning</span> systems —
+                        from <span class="text-emerald-400 font-semibold">demand forecasting</span> and ETL automation
+                        to LLM-powered tooling that lets teams query data in plain English.
                     </p>
 
                     <div class="flex flex-wrap gap-4 pt-4">
@@ -115,7 +128,7 @@
                             <span>View Work</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <a href="/Tanishq_Soni_DS_Resume.docx" id="download-resume-btn" class="btn-secondary">
+                        <a href="Tanishq_Soni_DS_Resume.docx" id="download-resume-btn" class="btn-secondary" download>
                             <i data-lucide="download" class="w-4 h-4"></i>
                             <span>Download Resume</span>
                         </a>
@@ -123,12 +136,12 @@
 
                     <!-- Social Links -->
                     <div class="flex gap-4 pt-4">
-                        <a href="https://github.com/tanishq20011430" target="_blank" class="social-link"
+                        <a href="https://github.com/tanishq20011430" target="_blank" rel="noopener" class="social-link"
                             aria-label="GitHub">
                             <i data-lucide="github" class="w-5 h-5"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank" class="social-link"
-                            aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LinkedIn">
                             <i data-lucide="linkedin" class="w-5 h-5"></i>
                         </a>
                         <a href="mailto:tanishqsoni81@gmail.com" class="social-link" aria-label="Email">
@@ -146,26 +159,25 @@
                                 <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                                 <div class="w-3 h-3 rounded-full bg-green-500"></div>
                             </div>
-                            <span class="text-xs text-slate-400">automation.py</span>
+                            <span class="text-xs text-slate-400">impact.py</span>
                         </div>
                         <div class="code-content">
-                            <pre class="font-mono text-sm"><code><span class="text-purple-400">def</span> <span class="text-yellow-400">automate_workflow</span>(<span class="text-orange-400">data</span>):
-    <span class="text-slate-400"># ETL Pipeline Automation</span>
-    <span class="text-blue-400">extract</span> = <span class="text-yellow-400">fetch_data</span>(<span class="text-orange-400">data</span>)
-    <span class="text-blue-400">transform</span> = <span class="text-yellow-400">clean_data</span>(<span class="text-orange-400">extract</span>)
-    <span class="text-blue-400">load</span> = <span class="text-yellow-400">push_to_db</span>(<span class="text-orange-400">transform</span>)
-    
+                            <pre class="font-mono text-sm"><code><span class="text-purple-400">def</span> <span class="text-yellow-400">deliver_impact</span>(<span class="text-orange-400">data</span>):
+    <span class="text-slate-400"># Forecasting · ETL · LLM tooling</span>
+    <span class="text-blue-400">model</span> = <span class="text-yellow-400">train_xgboost</span>(<span class="text-orange-400">data</span>)
+    <span class="text-blue-400">pipelines</span> = <span class="text-yellow-400">automate_etl</span>(<span class="text-orange-400">data</span>)
+
     <span class="text-purple-400">return</span> {
-        <span class="text-green-400">"status"</span>: <span class="text-green-400">"success"</span>,
-        <span class="text-green-400">"efficiency"</span>: <span class="text-green-400">"+70%"</span>,
-        <span class="text-green-400">"time_saved"</span>: <span class="text-green-400">"12 hrs/week"</span>
+        <span class="text-green-400">"forecast_error"</span>: <span class="text-green-400">"-25%"</span>,
+        <span class="text-green-400">"dashboards_shipped"</span>: <span class="text-green-400">12</span>,
+        <span class="text-green-400">"departments_served"</span>: <span class="text-green-400">5</span>
     }</code></pre>
                             <div class="code-output">
                                 <div class="flex items-center gap-2">
                                     <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
-                                    <span class="text-green-400">Workflow Automated Successfully</span>
+                                    <span class="text-green-400">Pipeline deployed successfully</span>
                                 </div>
-                                <div class="text-blue-400 mt-2">→ Manual effort reduced by 70%</div>
+                                <div class="text-blue-400 mt-2">→ Hours of manual reporting automated every week</div>
                             </div>
                         </div>
                     </div>
@@ -179,67 +191,134 @@
         </div>
     </section>
 
+    <!-- Highlights Strip -->
+    <section class="py-10 border-y border-slate-800/60 bg-slate-900/30">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="highlight-stat">
+                    <div class="highlight-number">2+</div>
+                    <div class="highlight-label">Years of Experience</div>
+                </div>
+                <div class="highlight-stat">
+                    <div class="highlight-number">12</div>
+                    <div class="highlight-label">Power BI Dashboards</div>
+                </div>
+                <div class="highlight-stat">
+                    <div class="highlight-number">25+</div>
+                    <div class="highlight-label">Users of Internal SQL Tool</div>
+                </div>
+                <div class="highlight-stat">
+                    <div class="highlight-number">2M+</div>
+                    <div class="highlight-label">Records Modeled</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section - Bento Grid -->
     <section id="projects" class="py-20 md:py-32 relative">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-16 stagger-item">
-                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Featured Projects</h2>
-                <p class="text-slate-400 text-lg">Building solutions that drive measurable impact</p>
+                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Featured Work</h2>
+                <p class="text-slate-400 text-lg">Production systems and projects with measurable impact</p>
             </div>
 
             <div class="bento-grid">
-                <!-- Tile 1 - Large (Booking Analysis) -->
+                <!-- Tile 1 - Large (Booking Analytics) -->
                 <div class="bento-card large stagger-item" data-tilt>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="badge-primary">Power BI</span>
-                        <span class="badge-secondary">SQL</span>
+                        <span class="badge-secondary">SQL Server</span>
                         <span class="badge-secondary">DAX</span>
+                        <span class="badge-secondary">Power Query</span>
                     </div>
-                    <h3 class="text-2xl font-bold font-mono mb-3">Booking Analysis Report</h3>
+                    <h3 class="text-2xl font-bold font-mono mb-3">Booking Analytics Report</h3>
                     <p class="text-slate-400 mb-6">
-                        60-page Power BI report from scratch, integrating 2M+ records via SQL.
-                        Reduced refresh time by 40%.
+                        60-page Power BI report over 2M+ booking records across 3 financial years —
+                        30+ optimized SQL queries and 45+ DAX measures for YTD, YoY, and MoM trends,
+                        with drill-through pages for sales, operations, and finance.
                     </p>
                     <div class="dashboard-mockup">
                         <div class="chart-bar"></div>
-                        <div class="chart-line"></div>
                         <div class="chart-pie"></div>
+                        <div class="chart-line"></div>
                     </div>
                     <div class="mt-4 flex items-center gap-2 text-sm text-blue-400">
                         <i data-lucide="trending-up" class="w-4 h-4"></i>
-                        <span>40% faster refresh time</span>
+                        <span>40% faster model refresh · used daily by 5 departments</span>
                     </div>
                 </div>
 
-                <!-- Tile 2 - Sports Data Pipeline -->
+                <!-- Tile 2 - Demand Forecasting -->
+                <div class="bento-card standard stagger-item" data-tilt>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge-primary">XGBoost</span>
+                        <span class="badge-secondary">Python</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-3">Demand Forecasting Model</h3>
+                    <p class="text-slate-400 mb-4">
+                        Owned end-to-end: engineered lag and rolling-window features on historical order data
+                        to forecast demand and support inventory planning.
+                    </p>
+                    <div class="flex items-center gap-4 mt-6">
+                        <div class="stat-box">
+                            <div class="text-2xl font-bold text-emerald-400">-25%</div>
+                            <div class="text-xs text-slate-400">Prediction error vs manual baselines</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tile 3 - LLM Analytics Assistant -->
+                <div class="bento-card standard stagger-item" data-tilt>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge-primary">Gen AI</span>
+                        <span class="badge-secondary">Gemini</span>
+                        <span class="badge-secondary">LangChain</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-3">LLM Analytics Assistant</h3>
+                    <p class="text-slate-400 mb-4">
+                        Internal assistant that turns natural-language business questions into queries
+                        against the analytics database — adopted by the team for ad-hoc analysis.
+                    </p>
+                    <div class="terminal-window">
+                        <div class="terminal-line"><span class="text-green-400">→</span> "Top styles by returns last
+                            month?"</div>
+                        <div class="terminal-line"><span class="text-green-400">✓</span> SQL generated &amp; executed
+                        </div>
+                        <div class="terminal-line"><span class="text-green-400">✓</span> Results in seconds</div>
+                    </div>
+                </div>
+
+                <!-- Tile 4 - Sports Data Pipeline -->
                 <div class="bento-card standard stagger-item" data-tilt>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="badge-primary">Python ETL</span>
-                        <span class="badge-secondary">LLM</span>
+                        <span class="badge-secondary">Perplexity API</span>
+                        <span class="badge-secondary">PostgreSQL</span>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-3">AI-Powered Sports Pipeline</h3>
+                    <h3 class="text-xl font-bold font-mono mb-3">Automated Sports Data Pipeline</h3>
                     <p class="text-slate-400 mb-4">
-                        Python-based ETL integrating Perplexity LLM and Odds API.
-                        Automated daily updates.
+                        Fully automated daily pipeline pulling live MLB &amp; NHL data from the Odds API and a
+                        Perplexity LLM, cleaned with Pandas and persisted to PostgreSQL via Cron.
+                        Pydantic validation isolates malformed responses instead of breaking the run.
                     </p>
                     <div class="terminal-window">
-                        <div class="terminal-line"><span class="text-green-400">→</span> Fetching data from API...</div>
-                        <div class="terminal-line"><span class="text-green-400">✓</span> Data fetched successfully</div>
-                        <div class="terminal-line"><span class="text-green-400">→</span> Processing with LLM...</div>
-                        <div class="terminal-line"><span class="text-green-400">✓</span> Pipeline complete</div>
+                        <div class="terminal-line"><span class="text-green-400">→</span> Fetching live feeds...</div>
+                        <div class="terminal-line"><span class="text-green-400">✓</span> Validated with Pydantic</div>
+                        <div class="terminal-line"><span class="text-green-400">✓</span> Loaded to PostgreSQL</div>
                     </div>
                 </div>
 
-                <!-- Tile 3 - SQL Execution Tool -->
+                <!-- Tile 5 - SQL Execution Tool -->
                 <div class="bento-card standard stagger-item" data-tilt>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="badge-primary">Full Stack</span>
+                        <span class="badge-primary">Internal Tool</span>
                         <span class="badge-secondary">SQL</span>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-3">SQL Execution Tool</h3>
+                    <h3 class="text-xl font-bold font-mono mb-3">Web-Based SQL Execution Tool</h3>
                     <p class="text-slate-400 mb-6">
-                        Web-based tool replacing pgAdmin for internal teams,
-                        increasing analyst productivity by 60%.
+                        Internal tool that replaced day-to-day pgAdmin usage, making query
+                        execution noticeably faster for the whole team.
                     </p>
                     <div class="flex items-center justify-center gap-6 py-6">
                         <div class="icon-box">
@@ -251,50 +330,52 @@
                         </div>
                     </div>
                     <div class="mt-4 text-center">
-                        <span class="text-emerald-400 font-bold">60% productivity boost</span>
+                        <span class="text-emerald-400 font-bold">Adopted by 25+ team members</span>
                     </div>
                 </div>
 
-                <!-- Tile 4 - Metric Card -->
+                <!-- Tile 6 - Metric Card -->
                 <div class="bento-card small metric-card stagger-item" data-tilt>
                     <div class="text-center">
-                        <div class="metric-number">70%</div>
-                        <p class="text-slate-400 text-sm font-medium">Manual Effort Reduced</p>
+                        <div class="metric-number">-25%</div>
+                        <p class="text-slate-400 text-sm font-medium">Forecast Error vs Manual Baselines</p>
                         <i data-lucide="zap" class="w-6 h-6 text-yellow-400 mx-auto mt-2"></i>
                     </div>
                 </div>
 
-                <!-- Tile 5 - Tech Stack -->
+                <!-- Tile 7 - Tech Stack -->
                 <div class="bento-card small tech-stack-card stagger-item" data-tilt>
-                    <h4 class="text-sm font-mono font-semibold mb-4 text-center">Tech Stack</h4>
+                    <h4 class="text-sm font-mono font-semibold mb-4 text-center">Core Stack</h4>
                     <div class="tech-cloud">
                         <span class="tech-badge">Python</span>
                         <span class="tech-badge">SQL</span>
+                        <span class="tech-badge">Power BI</span>
+                        <span class="tech-badge">XGBoost</span>
+                        <span class="tech-badge">LangChain</span>
                         <span class="tech-badge">AWS</span>
-                        <span class="tech-badge">Azure</span>
-                        <span class="tech-badge">Docker</span>
-                        <span class="tech-badge">Git</span>
                     </div>
                 </div>
 
-                <!-- Tile 6 - AI Recommendation System -->
+                <!-- Tile 8 - Recommendation Engine -->
                 <div class="bento-card standard stagger-item" data-tilt>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="badge-primary">Machine Learning</span>
-                        <span class="badge-secondary">AWS</span>
+                        <span class="badge-secondary">Scikit-learn</span>
+                        <span class="badge-secondary">TF-IDF</span>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-3">AI Recommendation System</h3>
+                    <h3 class="text-xl font-bold font-mono mb-3">Hybrid Recommendation Engine</h3>
                     <p class="text-slate-400 mb-4">
-                        Hybrid recommender for 10k+ monthly users, boosting engagement by 20%.
+                        Collaborative filtering with SVD matrix factorization, layered with content-based
+                        TF-IDF scoring — the hybrid improved recommendation relevance on the held-out test split.
                     </p>
                     <div class="flex items-center gap-4 mt-6">
                         <div class="stat-box">
-                            <div class="text-2xl font-bold text-blue-400">10k+</div>
-                            <div class="text-xs text-slate-400">Users/month</div>
+                            <div class="text-2xl font-bold text-blue-400">SVD</div>
+                            <div class="text-xs text-slate-400">Collaborative</div>
                         </div>
                         <div class="stat-box">
-                            <div class="text-2xl font-bold text-emerald-400">+20%</div>
-                            <div class="text-xs text-slate-400">Engagement</div>
+                            <div class="text-2xl font-bold text-emerald-400">TF-IDF</div>
+                            <div class="text-xs text-slate-400">Content-based</div>
                         </div>
                     </div>
                 </div>
@@ -306,8 +387,8 @@
     <section id="experience" class="py-20 md:py-32 relative">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-16 stagger-item">
-                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Experience Journey</h2>
-                <p class="text-slate-400 text-lg">2+ years of driving data-driven decisions</p>
+                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Experience</h2>
+                <p class="text-slate-400 text-lg">2+ years across retail analytics and fintech</p>
             </div>
 
             <div class="timeline">
@@ -316,26 +397,33 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">Jan 2025 – Present</div>
-                        <h3 class="text-2xl font-bold font-mono mb-2">Data Analyst</h3>
-                        <p class="text-blue-400 mb-4">Maxima Apparel</p>
+                        <h3 class="text-2xl font-bold font-mono mb-2">Data Analyst — ML &amp; Automation</h3>
+                        <p class="text-blue-400 mb-4">Maxima Apparel · Gurugram, India</p>
                         <ul class="space-y-2 text-slate-300">
                             <li class="flex gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Deployed 12 interactive Power BI reports, improving data accessibility for 5
-                                    departments</span>
+                                <span>Owned an XGBoost demand forecasting model that cut prediction error by 25% vs
+                                    manual estimates, directly supporting inventory planning</span>
                             </li>
                             <li class="flex gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Reduced reporting turnaround time by 43%</span>
+                                <span>Engineered Python &amp; SQL ETL pipelines (SQL Server → PostgreSQL), cutting
+                                    hours of manual reporting per week across 5 departments</span>
                             </li>
                             <li class="flex gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Built automated ETL pipelines (Python/SQL) reducing manual effort by 70%</span>
+                                <span>Shipped an LLM-powered analytics assistant (Gemini via LangChain) that answers
+                                    business questions in natural language</span>
                             </li>
                             <li class="flex gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Developed a web-based SQL execution tool accelerating query execution by
-                                    60%</span>
+                                <span>Delivered supply chain &amp; inventory analytics across the full lifecycle —
+                                    procurement, stock inward, allocation, dispatch, and returns</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Created 12 Power BI reports and an internal SQL execution tool adopted by 25+
+                                    users, reducing reporting turnaround from days to hours</span>
                             </li>
                         </ul>
                     </div>
@@ -345,22 +433,29 @@
                 <div class="timeline-item" data-scroll-reveal>
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">Oct 2023 – Oct 2024</div>
-                        <h3 class="text-2xl font-bold font-mono mb-2">Jr. Business Analyst</h3>
-                        <p class="text-blue-400 mb-4">Drona Pay</p>
+                        <div class="timeline-date">May 2024 – Oct 2024</div>
+                        <h3 class="text-2xl font-bold font-mono mb-2">Business Analyst</h3>
+                        <p class="text-blue-400 mb-4">Drona Pay · Mumbai, India</p>
                         <ul class="space-y-2 text-slate-300">
                             <li class="flex gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Orchestrated automation of 5 critical workflows with Camunda (30% efficiency
-                                    gain)</span>
+                                <span>Built, tested, and deployed JSON-based fraud-risk rule logic used in production
+                                    across 3 fintech implementations</span>
                             </li>
                             <li class="flex gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Administered databases and conducted log analysis ensuring 99.9% uptime</span>
+                                <span>Automated 5 business workflows (KYC verification, loan-approval routing,
+                                    repayment reminders) with Camunda BPM</span>
                             </li>
                             <li class="flex gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Tested 30+ API endpoints for seamless integration</span>
+                                <span>Verified 30+ REST API endpoints via Postman test suites, ensuring error-free
+                                    client rollouts</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Performed SQL log analysis to investigate and resolve issues in deployed logic,
+                                    keeping client services reliable</span>
                             </li>
                         </ul>
                     </div>
@@ -372,16 +467,17 @@
                     <div class="timeline-content">
                         <div class="timeline-date">Jun 2023 – Aug 2023</div>
                         <h3 class="text-2xl font-bold font-mono mb-2">Data Analytics Intern</h3>
-                        <p class="text-blue-400 mb-4">KPMG</p>
+                        <p class="text-blue-400 mb-4">KPMG · Remote</p>
                         <ul class="space-y-2 text-slate-300">
                             <li class="flex gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Analyzed business data to identify trends and support strategic
-                                    decision-making</span>
+                                <span>Analyzed large client datasets to surface actionable trends during client
+                                    engagements</span>
                             </li>
                             <li class="flex gap-3">
                                 <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Collaborated with cross-functional teams to deliver data-driven insights</span>
+                                <span>Built visualizations that guided business recommendations and strategic
+                                    decisions</span>
                             </li>
                         </ul>
                     </div>
@@ -391,11 +487,11 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="py-20 md:py-32 bg-slate-900/50">
+    <section id="skills" class="py-20 md:py-32 bg-slate-900/50">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-16 stagger-item">
-                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Skills & Technologies</h2>
-                <p class="text-slate-400 text-lg">Comprehensive toolkit for data-driven solutions</p>
+                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Skills &amp; Technologies</h2>
+                <p class="text-slate-400 text-lg">From raw data to production models and dashboards</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -403,25 +499,12 @@
                     <div class="skill-icon">
                         <i data-lucide="code" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-4">Languages</h3>
+                    <h3 class="text-xl font-bold font-mono mb-4">Programming &amp; Databases</h3>
                     <div class="space-y-2">
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">SQL</div>
-                        <div class="skill-item">R</div>
-                        <div class="skill-item">C++</div>
-                    </div>
-                </div>
-
-                <div class="skill-category stagger-item">
-                    <div class="skill-icon">
-                        <i data-lucide="bar-chart" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold font-mono mb-4">Visualization</h3>
-                    <div class="space-y-2">
-                        <div class="skill-item">Power BI</div>
-                        <div class="skill-item">Tableau</div>
-                        <div class="skill-item">Matplotlib</div>
-                        <div class="skill-item">Seaborn</div>
+                        <div class="skill-item">Python (Pandas, NumPy, SQLAlchemy)</div>
+                        <div class="skill-item">SQL Server · PostgreSQL</div>
+                        <div class="skill-item">Advanced SQL &amp; Query Optimization</div>
+                        <div class="skill-item">Git · Postman</div>
                     </div>
                 </div>
 
@@ -431,37 +514,96 @@
                     </div>
                     <h3 class="text-xl font-bold font-mono mb-4">Machine Learning</h3>
                     <div class="space-y-2">
-                        <div class="skill-item">Regression</div>
-                        <div class="skill-item">Classification</div>
-                        <div class="skill-item">NLP (BERT)</div>
-                        <div class="skill-item">XGBoost</div>
+                        <div class="skill-item">Scikit-learn · XGBoost</div>
+                        <div class="skill-item">Regression · Classification</div>
+                        <div class="skill-item">Time Series (ARIMA, SARIMA, Prophet)</div>
+                        <div class="skill-item">Feature Engineering · Evaluation</div>
                     </div>
                 </div>
 
                 <div class="skill-category stagger-item">
                     <div class="skill-icon">
-                        <i data-lucide="settings" class="w-6 h-6"></i>
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-4">Tools & Cloud</h3>
+                    <h3 class="text-xl font-bold font-mono mb-4">Gen AI &amp; NLP</h3>
                     <div class="space-y-2">
-                        <div class="skill-item">AWS</div>
-                        <div class="skill-item">Docker</div>
-                        <div class="skill-item">Airflow</div>
-                        <div class="skill-item">Git</div>
+                        <div class="skill-item">LLM APIs (Gemini, Perplexity)</div>
+                        <div class="skill-item">LangChain · RAG Prototyping</div>
+                        <div class="skill-item">Prompt Engineering</div>
+                        <div class="skill-item">NLTK · TF-IDF · BERT</div>
+                    </div>
+                </div>
+
+                <div class="skill-category stagger-item">
+                    <div class="skill-icon">
+                        <i data-lucide="bar-chart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-4">BI, Cloud &amp; Automation</h3>
+                    <div class="space-y-2">
+                        <div class="skill-item">Power BI (DAX, Power Query) · Tableau</div>
+                        <div class="skill-item">ETL/ELT Pipelines · Data Validation</div>
+                        <div class="skill-item">AWS (S3, EC2) · Airflow · Cron</div>
+                        <div class="skill-item">Camunda BPM · Matplotlib · Seaborn</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Education & Certifications -->
+    <section id="education" class="py-20 md:py-32">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16 stagger-item">
+                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Education &amp; Certifications</h2>
+                <p class="text-slate-400 text-lg">Academic foundation in AI &amp; Machine Learning</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
+                <div class="skill-category stagger-item">
+                    <div class="skill-icon">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-2">Master of Computer Applications</h3>
+                    <p class="text-blue-400 text-sm mb-1">AI &amp; Machine Learning</p>
+                    <p class="text-slate-400 text-sm">Vivekananda Global University, Jaipur · 2022 – 2024</p>
+                    <p class="text-emerald-400 text-sm mt-2 font-semibold">GPA: 8.3 / 10</p>
+                </div>
+
+                <div class="skill-category stagger-item">
+                    <div class="skill-icon">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-mono mb-2">Bachelor of Computer Applications</h3>
+                    <p class="text-blue-400 text-sm mb-1">Computer Applications</p>
+                    <p class="text-slate-400 text-sm">University of Rajasthan, Jaipur · 2019 – 2022</p>
+                    <p class="text-emerald-400 text-sm mt-2 font-semibold">76%</p>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto stagger-item">
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="cert-badge"><i data-lucide="award" class="w-4 h-4"></i> ML Pipelines with Azure ML
+                        Studio · Coursera</span>
+                    <span class="cert-badge"><i data-lucide="award" class="w-4 h-4"></i> Data Analysis with Python
+                        &amp; R · IBM</span>
+                    <span class="cert-badge"><i data-lucide="award" class="w-4 h-4"></i> Tableau Desktop Certified
+                        Professional · Intellipaat</span>
+                    <span class="cert-badge"><i data-lucide="award" class="w-4 h-4"></i> Foundations of Business
+                        Intelligence · Coursera</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Interactive Terminal -->
-    <section class="py-20 md:py-32">
+    <section class="py-20 md:py-32 bg-slate-900/50">
         <div class="container mx-auto px-4 md:px-6">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-8 stagger-item">
                     <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Interactive Terminal</h2>
                     <p class="text-slate-400 text-lg">Try commands: <code class="text-blue-400">help</code>, <code
-                            class="text-blue-400">skills</code>, <code class="text-blue-400">contact</code></p>
+                            class="text-blue-400">skills</code>, <code class="text-blue-400">projects</code>, <code
+                            class="text-blue-400">contact</code></p>
                 </div>
 
                 <div class="terminal-container stagger-item">
@@ -474,13 +616,13 @@
                         <span class="text-xs text-slate-400">terminal</span>
                     </div>
                     <div id="terminal-output" class="terminal-output">
-                        <div class="terminal-line">Welcome to Tanishq's Portfolio Terminal v1.0</div>
+                        <div class="terminal-line">Welcome to Tanishq's Portfolio Terminal v2.0</div>
                         <div class="terminal-line text-slate-400">Type 'help' to see available commands</div>
                         <div class="terminal-line">&nbsp;</div>
                     </div>
                     <div class="terminal-input-line">
                         <span class="text-emerald-400">visitor@tanishq:~$</span>
-                        <input type="text" id="terminal-input" class="terminal-input" autofocus>
+                        <input type="text" id="terminal-input" class="terminal-input" aria-label="Terminal input">
                     </div>
                 </div>
             </div>
@@ -488,23 +630,24 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-32 bg-slate-900/50">
+    <section id="contact" class="py-20 md:py-32">
         <div class="container mx-auto px-4 md:px-6">
             <div class="max-w-2xl mx-auto">
                 <div class="text-center mb-12 stagger-item">
                     <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Get In Touch</h2>
-                    <p class="text-slate-400 text-lg">Let's discuss how data can drive your business forward</p>
+                    <p class="text-slate-400 text-lg">Open to Data Analyst, Data Scientist &amp; ML Engineer roles —
+                        let's talk</p>
                 </div>
 
                 <form id="contact-form" class="contact-form stagger-item">
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-input" required>
+                        <input type="text" id="name" name="name" class="form-input" autocomplete="name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" required>
+                        <input type="email" id="email" name="email" class="form-input" autocomplete="email" required>
                     </div>
 
                     <div class="form-group">
@@ -528,6 +671,10 @@
                         <i data-lucide="phone" class="w-5 h-5"></i>
                         <span>+91 8824212520</span>
                     </div>
+                    <div class="flex items-center justify-center gap-2 text-slate-400">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        <span>Gurugram, India</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -538,14 +685,14 @@
         <div class="container mx-auto px-4 md:px-6">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                 <p class="text-slate-400 text-sm">
-                    © 2025 Tanishq Soni. Turning Messy Data into Measurable Outcomes.
+                    © 2026 Tanishq Soni · Engineering Data into Decisions
                 </p>
                 <div class="flex gap-4">
-                    <a href="https://github.com/tanishq20011430" target="_blank"
+                    <a href="https://github.com/tanishq20011430" target="_blank" rel="noopener"
                         class="text-slate-400 hover:text-blue-400 transition-colors" aria-label="GitHub">
                         <i data-lucide="github" class="w-5 h-5"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank"
+                    <a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank" rel="noopener"
                         class="text-slate-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn">
                         <i data-lucide="linkedin" class="w-5 h-5"></i>
                     </a>
@@ -564,7 +711,4 @@
     </script>
 </body>
 
-
 </html>
-
-

@@ -158,58 +158,87 @@ function initializeTerminal() {
 
     const commands = {
         help: `Available commands:
-  help      - Show this help message
-  skills    - Display technical skills
-  contact   - Show contact information
-  projects  - List featured projects
-  clear     - Clear terminal output
-  about     - About Tanishq Soni`,
+  help       - Show this help message
+  about      - About Tanishq Soni
+  skills     - Display technical skills
+  projects   - List featured projects
+  education  - Education & certifications
+  contact    - Show contact information
+  clear      - Clear terminal output`,
 
         skills: `Technical Skills:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Languages:     Python, SQL, R, C++
-Visualization: Power BI, Tableau, Matplotlib
-ML/AI:         Regression, Classification, NLP, XGBoost
-Tools:         AWS, Docker, Airflow, Git, Postman
-Databases:     PostgreSQL, MySQL, MongoDB
+Programming:   Python (Pandas, NumPy, SQLAlchemy), SQL
+Databases:     SQL Server, PostgreSQL
+ML/AI:         Scikit-learn, XGBoost, ARIMA/SARIMA/Prophet
+Gen AI & NLP:  Gemini & Perplexity APIs, LangChain, RAG,
+               NLTK, TF-IDF, BERT
+BI & Viz:      Power BI (DAX, Power Query), Tableau,
+               Matplotlib, Seaborn
+Cloud & Tools: AWS (S3, EC2), Airflow, Camunda, Cron,
+               Git, Postman
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
 
         contact: `Contact Information:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Email:    tanishqsoni81@gmail.com
 Phone:    +91 8824212520
-LinkedIn: linkedin.com/in/tanishqsoni
-GitHub:   github.com/tanishqsoni
+LinkedIn: linkedin.com/in/tanishq-soni14301
+GitHub:   github.com/tanishq20011430
+Location: Gurugram, India
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
 
-        projects: `Featured Projects:
+        projects: `Featured Work:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. Booking Analysis Report
-   → 60-page Power BI report, 2M+ records
-   
-2. AI-Powered Sports Data Pipeline
-   → Python ETL with LLM integration
-   
-3. SQL Execution Tool
-   → Web-based tool, 60% productivity boost
-   
-4. AI Recommendation System
-   → Hybrid recommender, 10k+ users
+1. Booking Analytics Report
+   → 60-page Power BI report, 2M+ records,
+     45+ DAX measures, 40% faster refresh
+
+2. Demand Forecasting Model
+   → XGBoost with lag & rolling-window features,
+     25% lower prediction error
+
+3. LLM Analytics Assistant
+   → Gemini + LangChain, natural language → SQL
+
+4. Automated Sports Data Pipeline
+   → Odds API + Perplexity LLM → PostgreSQL,
+     Pydantic-validated, Cron-scheduled
+
+5. Web-Based SQL Execution Tool
+   → Adopted by 25+ team members
+
+6. Hybrid Recommendation Engine
+   → SVD collaborative + TF-IDF content-based
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
 
         about: `About Tanishq Soni:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Title:       Data Analyst | Data Scientist
-Experience:  2+ years
-Tagline:     "Turning Messy Data into 
-             Measurable Business Outcomes"
+Experience:  2+ years (retail & fintech)
+Education:   MCA in AI & ML (GPA 8.3/10)
+Tagline:     "Engineering Data into Decisions"
 
 Specialties:
-  • Power BI Dashboard Development
-  • ETL Pipeline Automation
-  • Python & SQL Optimization
-  • AI-Integrated Analytics
-  • Process Automation (70% efficiency gain)
+  • Demand Forecasting (XGBoost, -25% error)
+  • ETL Pipeline Automation (Python & SQL)
+  • LLM-Powered Analytics Tooling
+  • Power BI Dashboards (12 shipped, 5 depts)
+  • Supply Chain & Inventory Analytics
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
+
+        education: `Education & Certifications:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MCA, AI & Machine Learning (GPA 8.3/10)
+  Vivekananda Global University · 2022-2024
+BCA (76%)
+  University of Rajasthan · 2019-2022
+
+Certifications:
+  • ML Pipelines with Azure ML Studio (Coursera)
+  • Data Analysis with Python & R (IBM)
+  • Tableau Desktop Certified Professional
+  • Foundations of Business Intelligence
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
 
         clear: 'CLEAR_TERMINAL'
@@ -456,14 +485,6 @@ function initializeContactForm() {
 }
 
 // ==========================================
-// DOWNLOAD RESUME
-// ==========================================
-document.getElementById('download-resume-btn')?.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.open('Tanishq_Soni_DS_Resume.docx', '_blank');
-});
-
-// ==========================================
 // PARALLAX SCROLL EFFECTS
 // ==========================================
 window.addEventListener('scroll', () => {
@@ -609,5 +630,5 @@ const optimizedScroll = throttle(() => {
 window.addEventListener('scroll', optimizedScroll);
 
 console.log('%c👋 Welcome to Tanishq\'s Portfolio!', 'color: #3b82f6; font-size: 20px; font-weight: bold;');
-console.log('%cTurning Messy Data into Measurable Business Outcomes', 'color: #10b981; font-size: 14px;');
+console.log('%cEngineering Data into Decisions', 'color: #10b981; font-size: 14px;');
 
