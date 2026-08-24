@@ -94,15 +94,19 @@ Gen AI & NLP   Gemini & Perplexity APIs, LangChain, RAG,
 BI & viz       Power BI (DAX, Power Query), Tableau,
                Matplotlib, Seaborn
 Cloud & tools  AWS (S3, EC2), Airflow, Camunda, Cron,
-               Git, Postman`,
+               Git, Postman
+Domain         Supply chain & inventory analytics,
+               retail, fintech`,
 
         projects: `01  Demand forecasting — XGBoost, -25% prediction error
-02  Booking analytics — 60-page Power BI, 2M+ records,
+02  Inventory lifecycle analytics — stock levels, movement,
+    order-to-delivery, procurement to returns
+03  Booking analytics — 60-page Power BI, 2M+ records,
     45+ DAX measures, 40% faster refresh
-03  LLM analytics assistant — Gemini + LangChain, NL -> SQL
-04  ETL automation — SQL Server -> PostgreSQL daily pipelines
-05  Internal SQL tool — adopted by 25+ team members
-06  Sports data pipeline — Odds API + Perplexity LLM,
+04  LLM analytics assistant — Gemini + LangChain, NL -> SQL
+05  ETL automation — SQL Server -> PostgreSQL daily pipelines
+06  Internal SQL tool — adopted by 25+ team members
+07  Sports data pipeline — Odds API + Perplexity LLM,
     Pydantic-validated, Cron-scheduled`,
 
         education: `MCA, AI & Machine Learning (GPA 8.3/10)
