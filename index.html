@@ -4,711 +4,453 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanishq Soni — Data Analyst · Data Scientist</title>
+    <title>Tanishq Soni — Data Analyst &amp; Data Scientist</title>
     <meta name="description"
-        content="Tanishq Soni — Data Analyst & Data Scientist with 2+ years of experience in SQL, Python, Power BI, machine learning, and analytics automation across retail and fintech.">
+        content="Tanishq Soni — Data Analyst & Data Scientist in Gurugram, India. 2+ years turning raw data into decisions: demand forecasting, ETL automation, LLM analytics tooling, and Power BI.">
     <meta name="keywords"
         content="Tanishq Soni, Data Analyst, Data Scientist, Machine Learning, Power BI, SQL, Python, XGBoost, ETL, Analytics">
     <meta name="author" content="Tanishq Soni">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tanishq Soni — Data Analyst · Data Scientist">
+    <meta property="og:title" content="Tanishq Soni — Data Analyst & Data Scientist">
     <meta property="og:description"
-        content="2+ years building production data and ML systems: forecasting models, ETL pipelines, LLM-powered analytics tooling, and Power BI dashboards.">
+        content="2+ years turning raw data into decisions: demand forecasting, ETL automation, LLM analytics tooling, and Power BI dashboards.">
 
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2216%22 fill=%22%23211D16%22/><text x=%2250%22 y=%2270%22 font-size=%2258%22 text-anchor=%22middle%22 fill=%22%23F6F2EA%22 font-family=%22Georgia,serif%22>T</text></svg>">
 
-    <!-- Fonts -->
+    <!-- Fonts: Fraunces (display serif) · Libre Franklin (body) · IBM Plex Mono (figures) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
         rel="stylesheet">
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Tailwind CSS v3 (v4 is not yet available via CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        slate: {
-                            950: '#020617',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-slate-950 text-white font-sans antialiased overflow-x-hidden">
+<body>
 
-    <!-- Navigation Bar -->
-    <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
-        <div class="nav-glass rounded-full px-6 py-3 flex items-center justify-between">
-            <div class="font-mono font-bold text-lg">
-                <span class="text-blue-400">Tanishq Soni</span>
-            </div>
+    <a class="skip-link" href="#work">Skip to content</a>
 
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a href="#top" class="wordmark">Tanishq&nbsp;Soni</a>
 
-            <button id="copy-email-btn" class="copy-email-btn">
-                <i data-lucide="mail" class="w-4 h-4"></i>
-                <span>Copy Email</span>
-            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <a href="#work">Work</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-btn" class="md:hidden" aria-label="Open menu">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu mt-2 nav-glass rounded-2xl overflow-hidden">
-            <a href="#home" class="mobile-nav-link">Home</a>
-            <a href="#projects" class="mobile-nav-link">Projects</a>
-            <a href="#experience" class="mobile-nav-link">Experience</a>
-            <a href="#skills" class="mobile-nav-link">Skills</a>
-            <a href="#education" class="mobile-nav-link">Education</a>
-            <a href="#contact" class="mobile-nav-link">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">
-        <i data-lucide="check-circle" class="w-5 h-5"></i>
-        <span>Email copied to clipboard!</span>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden">
-        <!-- Spotlight Effect -->
-        <div id="spotlight" class="spotlight"></div>
-
-        <div class="container mx-auto px-4 md:px-6 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Left Content -->
-                <div class="space-y-6 stagger-item">
-                    <div class="space-y-2">
-                        <p class="text-blue-400 font-mono text-sm md:text-base">Hi, I'm Tanishq Soni 👋</p>
-                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-mono tracking-tight leading-tight">
-                            Engineering Data<br>
-                            <span class="gradient-text">into Decisions.</span>
-                        </h1>
-                    </div>
-
-                    <p class="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl">
-                        Data Analyst &amp; Data Scientist with 2+ years building production analytics and
-                        <span class="text-blue-400 font-semibold">machine learning</span> systems —
-                        from <span class="text-emerald-400 font-semibold">demand forecasting</span> and ETL automation
-                        to LLM-powered tooling that lets teams query data in plain English.
-                    </p>
-
-                    <div class="flex flex-wrap gap-4 pt-4">
-                        <a href="#projects" class="btn-primary">
-                            <span>View Work</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                        <a href="Tanishq_Soni_DS_Resume.docx" id="download-resume-btn" class="btn-secondary" download>
-                            <i data-lucide="download" class="w-4 h-4"></i>
-                            <span>Download Resume</span>
-                        </a>
-                    </div>
-
-                    <!-- Social Links -->
-                    <div class="flex gap-4 pt-4">
-                        <a href="https://github.com/tanishq20011430" target="_blank" rel="noopener" class="social-link"
-                            aria-label="GitHub">
-                            <i data-lucide="github" class="w-5 h-5"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank" rel="noopener"
-                            class="social-link" aria-label="LinkedIn">
-                            <i data-lucide="linkedin" class="w-5 h-5"></i>
-                        </a>
-                        <a href="mailto:tanishqsoni81@gmail.com" class="social-link" aria-label="Email">
-                            <i data-lucide="mail" class="w-5 h-5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Content - Code Block -->
-                <div class="stagger-item">
-                    <div class="code-block">
-                        <div class="code-header">
-                            <div class="flex gap-2">
-                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                            </div>
-                            <span class="text-xs text-slate-400">impact.py</span>
-                        </div>
-                        <div class="code-content">
-                            <pre class="font-mono text-sm"><code><span class="text-purple-400">def</span> <span class="text-yellow-400">deliver_impact</span>(<span class="text-orange-400">data</span>):
-    <span class="text-slate-400"># Forecasting · ETL · LLM tooling</span>
-    <span class="text-blue-400">model</span> = <span class="text-yellow-400">train_xgboost</span>(<span class="text-orange-400">data</span>)
-    <span class="text-blue-400">pipelines</span> = <span class="text-yellow-400">automate_etl</span>(<span class="text-orange-400">data</span>)
-
-    <span class="text-purple-400">return</span> {
-        <span class="text-green-400">"forecast_error"</span>: <span class="text-green-400">"-25%"</span>,
-        <span class="text-green-400">"dashboards_shipped"</span>: <span class="text-green-400">12</span>,
-        <span class="text-green-400">"departments_served"</span>: <span class="text-green-400">5</span>
-    }</code></pre>
-                            <div class="code-output">
-                                <div class="flex items-center gap-2">
-                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
-                                    <span class="text-green-400">Pipeline deployed successfully</span>
-                                </div>
-                                <div class="text-blue-400 mt-2">→ Hours of manual reporting automated every week</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="header-side">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span class="status-text">Open to&nbsp;roles</span>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
             </div>
         </div>
+    </header>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
-            <i data-lucide="chevron-down" class="w-6 h-6"></i>
-        </div>
-    </section>
+    <main id="top">
 
-    <!-- Highlights Strip -->
-    <section class="py-10 border-y border-slate-800/60 bg-slate-900/30">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="highlight-stat">
-                    <div class="highlight-number">2+</div>
-                    <div class="highlight-label">Years of Experience</div>
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="wrap">
+                <p class="kicker reveal">Data Analyst &amp; Data Scientist · Gurugram, India</p>
+                <h1 class="reveal">I turn raw data into<br>decisions <em>businesses act&nbsp;on.</em></h1>
+                <div class="hero-cols reveal">
+                    <p class="lede">
+                        Over the past two years at Maxima Apparel, Drona Pay, and KPMG I've built
+                        demand-forecasting models, automated ETL pipelines, shipped an LLM assistant
+                        that answers business questions in plain English, and delivered dashboards
+                        that five departments rely on daily.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-solid" href="#contact">Get in touch</a>
+                        <a class="btn btn-ghost" href="Tanishq_Soni_DS_Resume.docx" download>Résumé&nbsp;↓</a>
+                        <div class="hero-links">
+                            <a href="https://github.com/tanishq20011430" target="_blank" rel="noopener">GitHub</a>
+                            <a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank"
+                                rel="noopener">LinkedIn</a>
+                            <a href="mailto:tanishqsoni81@gmail.com" id="email-link"
+                                data-email="tanishqsoni81@gmail.com">Email</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="highlight-stat">
-                    <div class="highlight-number">12</div>
-                    <div class="highlight-label">Power BI Dashboards</div>
-                </div>
-                <div class="highlight-stat">
-                    <div class="highlight-number">25+</div>
-                    <div class="highlight-label">Users of Internal SQL Tool</div>
-                </div>
-                <div class="highlight-stat">
-                    <div class="highlight-number">2M+</div>
-                    <div class="highlight-label">Records Modeled</div>
-                </div>
+
+                <!-- Figures ledger -->
+                <dl class="ledger reveal">
+                    <div class="ledger-item">
+                        <dt>Experience</dt>
+                        <dd>2+ <span>years</span></dd>
+                    </div>
+                    <div class="ledger-item">
+                        <dt>Forecast error cut</dt>
+                        <dd>25<span>%</span></dd>
+                    </div>
+                    <div class="ledger-item">
+                        <dt>Dashboards shipped</dt>
+                        <dd>12</dd>
+                    </div>
+                    <div class="ledger-item">
+                        <dt>Records modeled</dt>
+                        <dd>2M<span>+</span></dd>
+                    </div>
+                    <div class="ledger-item">
+                        <dt>Internal-tool users</dt>
+                        <dd>25<span>+</span></dd>
+                    </div>
+                </dl>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section - Bento Grid -->
-    <section id="projects" class="py-20 md:py-32 relative">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center mb-16 stagger-item">
-                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Featured Work</h2>
-                <p class="text-slate-400 text-lg">Production systems and projects with measurable impact</p>
+        <!-- ============ SELECTED WORK ============ -->
+        <section id="work" class="section">
+            <div class="wrap">
+                <header class="section-head reveal">
+                    <h2>Selected work</h2>
+                    <p>Six projects, each led by the result it produced.</p>
+                </header>
+
+                <ol class="case-list">
+                    <li class="case reveal">
+                        <span class="case-index">01</span>
+                        <div class="case-body">
+                            <h3>Cutting demand-forecast error by 25%</h3>
+                            <p>
+                                Owned an XGBoost forecasting model end-to-end at Maxima Apparel — engineered
+                                lag features and rolling-window averages on historical order data, beating
+                                prior manual estimates and directly steering inventory planning.
+                            </p>
+                            <p class="case-tools">Python · XGBoost · Pandas · Scikit-learn · SQL</p>
+                        </div>
+                        <div class="case-stat">
+                            <strong>−25%</strong>
+                            <span>prediction error vs manual baselines</span>
+                        </div>
+                    </li>
+
+                    <li class="case reveal">
+                        <span class="case-index">02</span>
+                        <div class="case-body">
+                            <h3>Self-serve booking analytics for 5 departments</h3>
+                            <p>
+                                Designed a 60-page Power BI report over 2M+ booking records spanning three
+                                financial years — 30+ optimized SQL queries and 45+ DAX measures for YTD,
+                                YoY, and MoM trends, with drill-through pages for sales, ops, and finance.
+                            </p>
+                            <p class="case-tools">Power BI · SQL Server · DAX · Power Query</p>
+                        </div>
+                        <div class="case-stat">
+                            <strong>40%</strong>
+                            <span>faster model refresh, used daily by 5 departments</span>
+                        </div>
+                    </li>
+
+                    <li class="case reveal">
+                        <span class="case-index">03</span>
+                        <div class="case-body">
+                            <h3>Analytics in plain English with an LLM assistant</h3>
+                            <p>
+                                Designed and shipped an internal assistant (Gemini API via LangChain) that
+                                translates natural-language business questions into queries against the
+                                analytics database — adopted by the team for ad-hoc analysis.
+                            </p>
+                            <p class="case-tools">Gemini API · LangChain · Python · SQL</p>
+                        </div>
+                        <div class="case-stat">
+                            <strong>NL→SQL</strong>
+                            <span>ad-hoc answers without writing a query</span>
+                        </div>
+                    </li>
+
+                    <li class="case reveal">
+                        <span class="case-index">04</span>
+                        <div class="case-body">
+                            <h3>Reporting hours automated away every week</h3>
+                            <p>
+                                Engineered Python and SQL ETL pipelines automating daily extraction and
+                                loading from SQL Server to PostgreSQL, replacing a large share of the
+                                team's manual reporting and data preparation work.
+                            </p>
+                            <p class="case-tools">Python · SQLAlchemy · SQL Server · PostgreSQL · Cron</p>
+                        </div>
+                        <div class="case-stat">
+                            <strong>5 depts</strong>
+                            <span>served by automated daily pipelines</span>
+                        </div>
+                    </li>
+
+                    <li class="case reveal">
+                        <span class="case-index">05</span>
+                        <div class="case-body">
+                            <h3>An internal SQL tool 25+ teammates use daily</h3>
+                            <p>
+                                Developed a web-based SQL execution tool that replaced day-to-day pgAdmin
+                                usage, making query turnaround noticeably faster across the team.
+                            </p>
+                            <p class="case-tools">SQL · Web tooling · PostgreSQL</p>
+                        </div>
+                        <div class="case-stat">
+                            <strong>25+</strong>
+                            <span>team members adopted it</span>
+                        </div>
+                    </li>
+
+                    <li class="case reveal">
+                        <span class="case-index">06</span>
+                        <div class="case-body">
+                            <h3>A hands-free daily sports-data pipeline</h3>
+                            <p>
+                                Fully automated pipeline pulling live MLB &amp; NHL data from the Odds API
+                                and a Perplexity LLM, cleaned with Pandas and persisted to PostgreSQL on a
+                                Cron schedule. Pydantic validation isolates malformed API responses instead
+                                of breaking the run.
+                            </p>
+                            <p class="case-tools">Python · Perplexity API · Odds API · Pydantic · PostgreSQL</p>
+                        </div>
+                        <div class="case-stat">
+                            <strong>Daily</strong>
+                            <span>zero-touch runs with fault isolation</span>
+                        </div>
+                    </li>
+                </ol>
+
+                <p class="aside reveal">
+                    Also: a hybrid recommendation engine — SVD collaborative filtering layered with
+                    content-based TF-IDF scoring, where the hybrid improved relevance on the held-out
+                    test split. <a href="https://github.com/tanishq20011430" target="_blank" rel="noopener">More on
+                        GitHub&nbsp;→</a>
+                </p>
             </div>
+        </section>
 
-            <div class="bento-grid">
-                <!-- Tile 1 - Large (Booking Analytics) -->
-                <div class="bento-card large stagger-item" data-tilt>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="badge-primary">Power BI</span>
-                        <span class="badge-secondary">SQL Server</span>
-                        <span class="badge-secondary">DAX</span>
-                        <span class="badge-secondary">Power Query</span>
-                    </div>
-                    <h3 class="text-2xl font-bold font-mono mb-3">Booking Analytics Report</h3>
-                    <p class="text-slate-400 mb-6">
-                        60-page Power BI report over 2M+ booking records across 3 financial years —
-                        30+ optimized SQL queries and 45+ DAX measures for YTD, YoY, and MoM trends,
-                        with drill-through pages for sales, operations, and finance.
-                    </p>
-                    <div class="dashboard-mockup">
-                        <div class="chart-bar"></div>
-                        <div class="chart-pie"></div>
-                        <div class="chart-line"></div>
-                    </div>
-                    <div class="mt-4 flex items-center gap-2 text-sm text-blue-400">
-                        <i data-lucide="trending-up" class="w-4 h-4"></i>
-                        <span>40% faster model refresh · used daily by 5 departments</span>
-                    </div>
-                </div>
+        <!-- ============ EXPERIENCE ============ -->
+        <section id="experience" class="section section-alt">
+            <div class="wrap">
+                <header class="section-head reveal">
+                    <h2>Experience</h2>
+                    <p>Retail analytics and fintech, from intern to owner of production systems.</p>
+                </header>
 
-                <!-- Tile 2 - Demand Forecasting -->
-                <div class="bento-card standard stagger-item" data-tilt>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="badge-primary">XGBoost</span>
-                        <span class="badge-secondary">Python</span>
+                <div class="xp reveal">
+                    <div class="xp-when">
+                        <span class="xp-dates">Jan 2025 — Present</span>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-3">Demand Forecasting Model</h3>
-                    <p class="text-slate-400 mb-4">
-                        Owned end-to-end: engineered lag and rolling-window features on historical order data
-                        to forecast demand and support inventory planning.
-                    </p>
-                    <div class="flex items-center gap-4 mt-6">
-                        <div class="stat-box">
-                            <div class="text-2xl font-bold text-emerald-400">-25%</div>
-                            <div class="text-xs text-slate-400">Prediction error vs manual baselines</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tile 3 - LLM Analytics Assistant -->
-                <div class="bento-card standard stagger-item" data-tilt>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="badge-primary">Gen AI</span>
-                        <span class="badge-secondary">Gemini</span>
-                        <span class="badge-secondary">LangChain</span>
-                    </div>
-                    <h3 class="text-xl font-bold font-mono mb-3">LLM Analytics Assistant</h3>
-                    <p class="text-slate-400 mb-4">
-                        Internal assistant that turns natural-language business questions into queries
-                        against the analytics database — adopted by the team for ad-hoc analysis.
-                    </p>
-                    <div class="terminal-window">
-                        <div class="terminal-line"><span class="text-green-400">→</span> "Top styles by returns last
-                            month?"</div>
-                        <div class="terminal-line"><span class="text-green-400">✓</span> SQL generated &amp; executed
-                        </div>
-                        <div class="terminal-line"><span class="text-green-400">✓</span> Results in seconds</div>
-                    </div>
-                </div>
-
-                <!-- Tile 4 - Sports Data Pipeline -->
-                <div class="bento-card standard stagger-item" data-tilt>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="badge-primary">Python ETL</span>
-                        <span class="badge-secondary">Perplexity API</span>
-                        <span class="badge-secondary">PostgreSQL</span>
-                    </div>
-                    <h3 class="text-xl font-bold font-mono mb-3">Automated Sports Data Pipeline</h3>
-                    <p class="text-slate-400 mb-4">
-                        Fully automated daily pipeline pulling live MLB &amp; NHL data from the Odds API and a
-                        Perplexity LLM, cleaned with Pandas and persisted to PostgreSQL via Cron.
-                        Pydantic validation isolates malformed responses instead of breaking the run.
-                    </p>
-                    <div class="terminal-window">
-                        <div class="terminal-line"><span class="text-green-400">→</span> Fetching live feeds...</div>
-                        <div class="terminal-line"><span class="text-green-400">✓</span> Validated with Pydantic</div>
-                        <div class="terminal-line"><span class="text-green-400">✓</span> Loaded to PostgreSQL</div>
-                    </div>
-                </div>
-
-                <!-- Tile 5 - SQL Execution Tool -->
-                <div class="bento-card standard stagger-item" data-tilt>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="badge-primary">Internal Tool</span>
-                        <span class="badge-secondary">SQL</span>
-                    </div>
-                    <h3 class="text-xl font-bold font-mono mb-3">Web-Based SQL Execution Tool</h3>
-                    <p class="text-slate-400 mb-6">
-                        Internal tool that replaced day-to-day pgAdmin usage, making query
-                        execution noticeably faster for the whole team.
-                    </p>
-                    <div class="flex items-center justify-center gap-6 py-6">
-                        <div class="icon-box">
-                            <i data-lucide="database" class="w-8 h-8 text-blue-400"></i>
-                        </div>
-                        <div class="connector-line"></div>
-                        <div class="icon-box">
-                            <i data-lucide="globe" class="w-8 h-8 text-emerald-400"></i>
-                        </div>
-                    </div>
-                    <div class="mt-4 text-center">
-                        <span class="text-emerald-400 font-bold">Adopted by 25+ team members</span>
-                    </div>
-                </div>
-
-                <!-- Tile 6 - Metric Card -->
-                <div class="bento-card small metric-card stagger-item" data-tilt>
-                    <div class="text-center">
-                        <div class="metric-number">-25%</div>
-                        <p class="text-slate-400 text-sm font-medium">Forecast Error vs Manual Baselines</p>
-                        <i data-lucide="zap" class="w-6 h-6 text-yellow-400 mx-auto mt-2"></i>
-                    </div>
-                </div>
-
-                <!-- Tile 7 - Tech Stack -->
-                <div class="bento-card small tech-stack-card stagger-item" data-tilt>
-                    <h4 class="text-sm font-mono font-semibold mb-4 text-center">Core Stack</h4>
-                    <div class="tech-cloud">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">SQL</span>
-                        <span class="tech-badge">Power BI</span>
-                        <span class="tech-badge">XGBoost</span>
-                        <span class="tech-badge">LangChain</span>
-                        <span class="tech-badge">AWS</span>
-                    </div>
-                </div>
-
-                <!-- Tile 8 - Recommendation Engine -->
-                <div class="bento-card standard stagger-item" data-tilt>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="badge-primary">Machine Learning</span>
-                        <span class="badge-secondary">Scikit-learn</span>
-                        <span class="badge-secondary">TF-IDF</span>
-                    </div>
-                    <h3 class="text-xl font-bold font-mono mb-3">Hybrid Recommendation Engine</h3>
-                    <p class="text-slate-400 mb-4">
-                        Collaborative filtering with SVD matrix factorization, layered with content-based
-                        TF-IDF scoring — the hybrid improved recommendation relevance on the held-out test split.
-                    </p>
-                    <div class="flex items-center gap-4 mt-6">
-                        <div class="stat-box">
-                            <div class="text-2xl font-bold text-blue-400">SVD</div>
-                            <div class="text-xs text-slate-400">Collaborative</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="text-2xl font-bold text-emerald-400">TF-IDF</div>
-                            <div class="text-xs text-slate-400">Content-based</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Timeline -->
-    <section id="experience" class="py-20 md:py-32 relative">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center mb-16 stagger-item">
-                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Experience</h2>
-                <p class="text-slate-400 text-lg">2+ years across retail analytics and fintech</p>
-            </div>
-
-            <div class="timeline">
-                <!-- Timeline Item 1 - Maxima Apparel -->
-                <div class="timeline-item" data-scroll-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jan 2025 – Present</div>
-                        <h3 class="text-2xl font-bold font-mono mb-2">Data Analyst — ML &amp; Automation</h3>
-                        <p class="text-blue-400 mb-4">Maxima Apparel · Gurugram, India</p>
-                        <ul class="space-y-2 text-slate-300">
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Owned an XGBoost demand forecasting model that cut prediction error by 25% vs
-                                    manual estimates, directly supporting inventory planning</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Engineered Python &amp; SQL ETL pipelines (SQL Server → PostgreSQL), cutting
-                                    hours of manual reporting per week across 5 departments</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Shipped an LLM-powered analytics assistant (Gemini via LangChain) that answers
-                                    business questions in natural language</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Delivered supply chain &amp; inventory analytics across the full lifecycle —
-                                    procurement, stock inward, allocation, dispatch, and returns</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Created 12 Power BI reports and an internal SQL execution tool adopted by 25+
-                                    users, reducing reporting turnaround from days to hours</span>
-                            </li>
+                    <div class="xp-what">
+                        <h3>Data Analyst — ML &amp; Automation</h3>
+                        <p class="xp-org">Maxima Apparel · Gurugram, India</p>
+                        <ul>
+                            <li>Owned an XGBoost demand-forecasting model that cut prediction error by 25%
+                                versus manual estimates, directly supporting inventory planning.</li>
+                            <li>Engineered Python &amp; SQL ETL pipelines (SQL Server → PostgreSQL) cutting hours
+                                of manual reporting per week across five departments.</li>
+                            <li>Shipped an LLM-powered analytics assistant (Gemini via LangChain) the team uses
+                                for ad-hoc analysis in natural language.</li>
+                            <li>Delivered supply-chain and inventory analytics across the full lifecycle —
+                                procurement, stock inward, allocation, dispatch, and returns.</li>
+                            <li>Created 12 Power BI reports and an internal SQL tool adopted by 25+ users,
+                                reducing reporting turnaround from days to hours.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Timeline Item 2 - Drona Pay -->
-                <div class="timeline-item" data-scroll-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">May 2024 – Oct 2024</div>
-                        <h3 class="text-2xl font-bold font-mono mb-2">Business Analyst</h3>
-                        <p class="text-blue-400 mb-4">Drona Pay · Mumbai, India</p>
-                        <ul class="space-y-2 text-slate-300">
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Built, tested, and deployed JSON-based fraud-risk rule logic used in production
-                                    across 3 fintech implementations</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Automated 5 business workflows (KYC verification, loan-approval routing,
-                                    repayment reminders) with Camunda BPM</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Verified 30+ REST API endpoints via Postman test suites, ensuring error-free
-                                    client rollouts</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Performed SQL log analysis to investigate and resolve issues in deployed logic,
-                                    keeping client services reliable</span>
-                            </li>
+                <div class="xp reveal">
+                    <div class="xp-when">
+                        <span class="xp-dates">May — Oct 2024</span>
+                    </div>
+                    <div class="xp-what">
+                        <h3>Business Analyst</h3>
+                        <p class="xp-org">Drona Pay · Mumbai, India</p>
+                        <ul>
+                            <li>Built, tested, and deployed JSON-based fraud-risk rule logic used in production
+                                across three fintech implementations.</li>
+                            <li>Automated five business workflows — KYC verification, loan-approval routing,
+                                repayment reminders — with Camunda BPM.</li>
+                            <li>Verified 30+ REST API endpoints with Postman test suites for error-free client
+                                rollouts, and resolved production issues via SQL log analysis.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Timeline Item 3 - KPMG -->
-                <div class="timeline-item" data-scroll-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jun 2023 – Aug 2023</div>
-                        <h3 class="text-2xl font-bold font-mono mb-2">Data Analytics Intern</h3>
-                        <p class="text-blue-400 mb-4">KPMG · Remote</p>
-                        <ul class="space-y-2 text-slate-300">
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Analyzed large client datasets to surface actionable trends during client
-                                    engagements</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Built visualizations that guided business recommendations and strategic
-                                    decisions</span>
-                            </li>
+                <div class="xp reveal">
+                    <div class="xp-when">
+                        <span class="xp-dates">Jun — Aug 2023</span>
+                    </div>
+                    <div class="xp-what">
+                        <h3>Data Analytics Intern</h3>
+                        <p class="xp-org">KPMG · Remote</p>
+                        <ul>
+                            <li>Analyzed large client datasets to surface actionable trends, building
+                                visualizations that guided business recommendations during engagements.</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 md:py-32 bg-slate-900/50">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center mb-16 stagger-item">
-                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Skills &amp; Technologies</h2>
-                <p class="text-slate-400 text-lg">From raw data to production models and dashboards</p>
-            </div>
+        <!-- ============ SKILLS ============ -->
+        <section id="skills" class="section">
+            <div class="wrap">
+                <header class="section-head reveal">
+                    <h2>Toolbox</h2>
+                    <p>From raw extraction to production models and the dashboards on top.</p>
+                </header>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="skill-category stagger-item">
-                    <div class="skill-icon">
-                        <i data-lucide="code" class="w-6 h-6"></i>
+                <div class="skills-grid reveal">
+                    <div class="skill-col">
+                        <h3>Programming &amp; data</h3>
+                        <ul>
+                            <li>Python — Pandas, NumPy, SQLAlchemy</li>
+                            <li>SQL — SQL Server, PostgreSQL</li>
+                            <li>Query optimization</li>
+                            <li>Git · Postman</li>
+                        </ul>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-4">Programming &amp; Databases</h3>
-                    <div class="space-y-2">
-                        <div class="skill-item">Python (Pandas, NumPy, SQLAlchemy)</div>
-                        <div class="skill-item">SQL Server · PostgreSQL</div>
-                        <div class="skill-item">Advanced SQL &amp; Query Optimization</div>
-                        <div class="skill-item">Git · Postman</div>
+                    <div class="skill-col">
+                        <h3>Machine learning</h3>
+                        <ul>
+                            <li>Scikit-learn · XGBoost</li>
+                            <li>Regression · Classification</li>
+                            <li>Time series — ARIMA, SARIMA, Prophet</li>
+                            <li>Feature engineering &amp; evaluation</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="skill-category stagger-item">
-                    <div class="skill-icon">
-                        <i data-lucide="brain" class="w-6 h-6"></i>
+                    <div class="skill-col">
+                        <h3>Generative AI &amp; NLP</h3>
+                        <ul>
+                            <li>LLM APIs — Gemini, Perplexity</li>
+                            <li>LangChain · RAG prototyping</li>
+                            <li>Prompt engineering</li>
+                            <li>NLTK · TF-IDF · BERT</li>
+                        </ul>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-4">Machine Learning</h3>
-                    <div class="space-y-2">
-                        <div class="skill-item">Scikit-learn · XGBoost</div>
-                        <div class="skill-item">Regression · Classification</div>
-                        <div class="skill-item">Time Series (ARIMA, SARIMA, Prophet)</div>
-                        <div class="skill-item">Feature Engineering · Evaluation</div>
-                    </div>
-                </div>
-
-                <div class="skill-category stagger-item">
-                    <div class="skill-icon">
-                        <i data-lucide="sparkles" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold font-mono mb-4">Gen AI &amp; NLP</h3>
-                    <div class="space-y-2">
-                        <div class="skill-item">LLM APIs (Gemini, Perplexity)</div>
-                        <div class="skill-item">LangChain · RAG Prototyping</div>
-                        <div class="skill-item">Prompt Engineering</div>
-                        <div class="skill-item">NLTK · TF-IDF · BERT</div>
-                    </div>
-                </div>
-
-                <div class="skill-category stagger-item">
-                    <div class="skill-icon">
-                        <i data-lucide="bar-chart" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold font-mono mb-4">BI, Cloud &amp; Automation</h3>
-                    <div class="space-y-2">
-                        <div class="skill-item">Power BI (DAX, Power Query) · Tableau</div>
-                        <div class="skill-item">ETL/ELT Pipelines · Data Validation</div>
-                        <div class="skill-item">AWS (S3, EC2) · Airflow · Cron</div>
-                        <div class="skill-item">Camunda BPM · Matplotlib · Seaborn</div>
+                    <div class="skill-col">
+                        <h3>BI, cloud &amp; automation</h3>
+                        <ul>
+                            <li>Power BI — DAX, Power Query · Tableau</li>
+                            <li>ETL/ELT pipelines · data validation</li>
+                            <li>AWS — S3, EC2 · Airflow · Cron</li>
+                            <li>Camunda BPM · Matplotlib · Seaborn</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education & Certifications -->
-    <section id="education" class="py-20 md:py-32">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center mb-16 stagger-item">
-                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Education &amp; Certifications</h2>
-                <p class="text-slate-400 text-lg">Academic foundation in AI &amp; Machine Learning</p>
-            </div>
+        <!-- ============ EDUCATION ============ -->
+        <section id="education" class="section section-alt">
+            <div class="wrap">
+                <header class="section-head reveal">
+                    <h2>Education &amp; certifications</h2>
+                </header>
 
-            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
-                <div class="skill-category stagger-item">
-                    <div class="skill-icon">
-                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                <div class="edu-grid reveal">
+                    <div class="edu">
+                        <h3>Master of Computer Applications — AI &amp; ML</h3>
+                        <p>Vivekananda Global University, Jaipur · 2022–2024</p>
+                        <p class="edu-mark">GPA 8.3 / 10</p>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-2">Master of Computer Applications</h3>
-                    <p class="text-blue-400 text-sm mb-1">AI &amp; Machine Learning</p>
-                    <p class="text-slate-400 text-sm">Vivekananda Global University, Jaipur · 2022 – 2024</p>
-                    <p class="text-emerald-400 text-sm mt-2 font-semibold">GPA: 8.3 / 10</p>
-                </div>
-
-                <div class="skill-category stagger-item">
-                    <div class="skill-icon">
-                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    <div class="edu">
+                        <h3>Bachelor of Computer Applications</h3>
+                        <p>University of Rajasthan, Jaipur · 2019–2022</p>
+                        <p class="edu-mark">76%</p>
                     </div>
-                    <h3 class="text-xl font-bold font-mono mb-2">Bachelor of Computer Applications</h3>
-                    <p class="text-blue-400 text-sm mb-1">Computer Applications</p>
-                    <p class="text-slate-400 text-sm">University of Rajasthan, Jaipur · 2019 – 2022</p>
-                    <p class="text-emerald-400 text-sm mt-2 font-semibold">76%</p>
                 </div>
+
+                <ul class="cert-list reveal">
+                    <li>ML Pipelines with Azure ML Studio — Coursera</li>
+                    <li>Data Analysis with Python &amp; R — IBM</li>
+                    <li>Tableau Desktop Certified Professional — Intellipaat</li>
+                    <li>Foundations of Business Intelligence — Coursera</li>
+                </ul>
             </div>
+        </section>
 
-            <div class="max-w-4xl mx-auto stagger-item">
-                <div class="flex flex-wrap justify-center gap-3">
-                    <span class="cert-badge"><i data-lucide="award" class="w-4 h-4"></i> ML Pipelines with Azure ML
-                        Studio · Coursera</span>
-                    <span class="cert-badge"><i data-lucide="award" class="w-4 h-4"></i> Data Analysis with Python
-                        &amp; R · IBM</span>
-                    <span class="cert-badge"><i data-lucide="award" class="w-4 h-4"></i> Tableau Desktop Certified
-                        Professional · Intellipaat</span>
-                    <span class="cert-badge"><i data-lucide="award" class="w-4 h-4"></i> Foundations of Business
-                        Intelligence · Coursera</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- ============ CONSOLE ============ -->
+        <section class="section">
+            <div class="wrap">
+                <header class="section-head reveal">
+                    <h2>Ask the console</h2>
+                    <p>A small interactive index of this page. Try
+                        <code>help</code>, <code>skills</code>, <code>projects</code>, or <code>contact</code>.
+                    </p>
+                </header>
 
-    <!-- Interactive Terminal -->
-    <section class="py-20 md:py-32 bg-slate-900/50">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-8 stagger-item">
-                    <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Interactive Terminal</h2>
-                    <p class="text-slate-400 text-lg">Try commands: <code class="text-blue-400">help</code>, <code
-                            class="text-blue-400">skills</code>, <code class="text-blue-400">projects</code>, <code
-                            class="text-blue-400">contact</code></p>
-                </div>
-
-                <div class="terminal-container stagger-item">
-                    <div class="terminal-header">
-                        <div class="flex gap-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <span class="text-xs text-slate-400">terminal</span>
+                <div class="console reveal">
+                    <div class="console-bar">
+                        <span>tanishq — query console</span>
                     </div>
-                    <div id="terminal-output" class="terminal-output">
-                        <div class="terminal-line">Welcome to Tanishq's Portfolio Terminal v2.0</div>
-                        <div class="terminal-line text-slate-400">Type 'help' to see available commands</div>
+                    <div id="terminal-output" class="console-out">
+                        <div class="terminal-line">Portfolio console v3.0 — type 'help' to begin.</div>
                         <div class="terminal-line">&nbsp;</div>
                     </div>
-                    <div class="terminal-input-line">
-                        <span class="text-emerald-400">visitor@tanishq:~$</span>
-                        <input type="text" id="terminal-input" class="terminal-input" aria-label="Terminal input">
+                    <div class="console-in">
+                        <span class="prompt">query&gt;</span>
+                        <input type="text" id="terminal-input" aria-label="Console input" autocomplete="off"
+                            spellcheck="false">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-32">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="max-w-2xl mx-auto">
-                <div class="text-center mb-12 stagger-item">
-                    <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Get In Touch</h2>
-                    <p class="text-slate-400 text-lg">Open to Data Analyst, Data Scientist &amp; ML Engineer roles —
-                        let's talk</p>
-                </div>
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="section section-alt">
+            <div class="wrap contact-wrap">
+                <header class="section-head reveal">
+                    <h2>Let's talk</h2>
+                    <p>Open to Data Analyst, Data Scientist, and ML Engineer roles.
+                        The fastest way to reach me is email — or use the form.</p>
+                </header>
 
-                <form id="contact-form" class="contact-form stagger-item">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-input" autocomplete="name" required>
-                    </div>
+                <div class="contact-cols reveal">
+                    <form id="contact-form" class="contact-form">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-solid" id="submit-btn">Send message</button>
+                    </form>
 
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" autocomplete="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" rows="5" class="form-input" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primary w-full" id="submit-btn">
-                        <span>Send Message</span>
-                        <i data-lucide="send" class="w-4 h-4"></i>
-                    </button>
-                </form>
-
-                <div class="mt-12 text-center space-y-4">
-                    <div class="flex items-center justify-center gap-2 text-slate-400">
-                        <i data-lucide="mail" class="w-5 h-5"></i>
-                        <a href="mailto:tanishqsoni81@gmail.com"
-                            class="hover:text-blue-400 transition-colors">tanishqsoni81@gmail.com</a>
-                    </div>
-                    <div class="flex items-center justify-center gap-2 text-slate-400">
-                        <i data-lucide="phone" class="w-5 h-5"></i>
-                        <span>+91 8824212520</span>
-                    </div>
-                    <div class="flex items-center justify-center gap-2 text-slate-400">
-                        <i data-lucide="map-pin" class="w-5 h-5"></i>
-                        <span>Gurugram, India</span>
-                    </div>
+                    <address class="contact-meta">
+                        <p><span>Email</span><a href="mailto:tanishqsoni81@gmail.com">tanishqsoni81@gmail.com</a></p>
+                        <p><span>Phone</span>+91 88242 12520</p>
+                        <p><span>Location</span>Gurugram, India</p>
+                        <p><span>GitHub</span><a href="https://github.com/tanishq20011430" target="_blank"
+                                rel="noopener">tanishq20011430</a></p>
+                        <p><span>LinkedIn</span><a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank"
+                                rel="noopener">tanishq-soni14301</a></p>
+                    </address>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="py-8 border-t border-slate-800">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="text-slate-400 text-sm">
-                    © 2026 Tanishq Soni · Engineering Data into Decisions
-                </p>
-                <div class="flex gap-4">
-                    <a href="https://github.com/tanishq20011430" target="_blank" rel="noopener"
-                        class="text-slate-400 hover:text-blue-400 transition-colors" aria-label="GitHub">
-                        <i data-lucide="github" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/tanishq-soni14301/" target="_blank" rel="noopener"
-                        class="text-slate-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn">
-                        <i data-lucide="linkedin" class="w-5 h-5"></i>
-                    </a>
-                    <a href="mailto:tanishqsoni81@gmail.com"
-                        class="text-slate-400 hover:text-blue-400 transition-colors" aria-label="Email">
-                        <i data-lucide="mail" class="w-5 h-5"></i>
-                    </a>
-                </div>
-            </div>
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>© 2026 Tanishq Soni</p>
+            <p class="footer-note">Set in Fraunces &amp; Libre Franklin. No trackers, no cookies.</p>
         </div>
     </footer>
 
+    <div id="toast" class="toast" role="status">Email copied to clipboard</div>
+
     <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 
 </html>

@@ -4,11 +4,18 @@ Personal portfolio website for **Tanishq Soni**, Data Analyst & Data Scientist.
 
 **Live site:** https://tanishq20011430.github.io/Personal_website/
 
+## Design
+
+Warm editorial "data-ink on paper" direction — no frameworks, hand-written CSS:
+
+- Palette (60/30/10): paper `#F6F2EA` · ink `#211D16` · rust accent `#A63D14`
+- Type: Fraunces (display serif) · Libre Franklin (body) · IBM Plex Mono (figures)
+- Numbered, outcome-led case studies with impact stats; hairline rules instead of cards
+
 ## Highlights
 
-- Interactive dark-themed single-page portfolio (HTML, Tailwind CSS, vanilla JS)
 - Featured work: demand forecasting (XGBoost), LLM analytics assistant (Gemini + LangChain), Power BI booking analytics, automated ETL pipelines
-- Interactive terminal with `help`, `about`, `skills`, `projects`, `education`, `contact` commands
+- Interactive query console with `help`, `about`, `skills`, `projects`, `education`, `contact` commands
 - Contact form powered by Web3Forms
 - Auto-deployed to GitHub Pages via GitHub Actions on every push to `main`
 
