@@ -385,6 +385,22 @@ a {
     margin-top: 14px;
 }
 
+.case-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--rust);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    transition: color 0.2s ease;
+}
+
+.case-link:hover {
+    color: var(--rust-deep);
+}
+
 .case-stat {
     text-align: right;
     padding-top: 4px;
