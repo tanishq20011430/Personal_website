@@ -125,6 +125,11 @@ Location  Gurugram, India`,
         clear: 'CLEAR'
     };
 
+    // Demo the console on load so it never reads as an empty box
+    addLine(output, `<span class="cmd">query&gt;</span> help`);
+    addLine(output, escapeHtml(commands.help));
+    addLine(output, '&nbsp;');
+
     input.addEventListener('keydown', (e) => {
         if (e.key !== 'Enter') return;
         const cmd = input.value.trim().toLowerCase();

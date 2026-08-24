@@ -11,7 +11,7 @@
     --paper-deep: #EEE8DB;
     --ink: #211D16;
     --ink-soft: #5C543F;
-    --ink-faint: #8A8069;
+    --ink-faint: #6F6750;
     --hairline: rgba(33, 29, 22, 0.18);
     --rust: #A63D14;
     --rust-deep: #7E2E0E;
@@ -563,6 +563,51 @@ a {
     padding: 8px 16px;
     border: 1px solid var(--hairline);
     border-radius: 999px;
+}
+
+/* ============ ABOUT ============ */
+.about-cols {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 48px;
+    align-items: start;
+}
+
+.about-title {
+    font-family: var(--serif);
+    font-weight: 550;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    border-top: 1px solid var(--ink);
+    padding-top: 24px;
+}
+
+.about-body {
+    border-top: 1px solid var(--hairline);
+    padding-top: 28px;
+}
+
+.about-body p {
+    color: var(--ink-soft);
+    font-size: 1.125rem;
+    line-height: 1.75;
+    max-width: 62ch;
+}
+
+.about-body p+p {
+    margin-top: 20px;
+}
+
+@media (max-width: 680px) {
+    .about-cols {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .about-title br {
+        display: none;
+    }
 }
 
 /* ============ CONSOLE (the page's one dark figure) ============ */
